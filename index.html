@@ -454,34 +454,61 @@
     }
 
     .reason-card {
-      background: linear-gradient(to bottom, #ffffff, #fffbf7);
-      border-radius: 18px;
-      padding: 1.4rem 1.5rem;
-      border: 1px solid var(--border);
+      background: linear-gradient(145deg, #fdfbf7, #f9f5f0);
+      border-radius: 24px;
+      padding: 2.2rem 1.8rem 2rem;
+      border: 1px solid rgba(193, 122, 74, 0.12);
       font-size: 0.95rem;
-      box-shadow: 0 6px 20px var(--warm-shadow);
-      transition: all 0.3s ease;
+      box-shadow: 0 8px 24px rgba(139, 90, 60, 0.08), 0 2px 8px rgba(193, 122, 74, 0.05);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reason-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-light), var(--accent), var(--accent-light));
+      opacity: 0;
+      transition: opacity 0.4s ease;
     }
 
     .reason-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px var(--card-shadow);
-      border-color: var(--accent-light);
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(139, 90, 60, 0.15), 0 6px 16px rgba(193, 122, 74, 0.1);
+      border-color: rgba(193, 122, 74, 0.25);
+    }
+
+    .reason-card:hover::before {
+      opacity: 1;
     }
 
     .reason-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.35;
+      color: var(--accent-dark);
+      font-weight: 600;
     }
 
     .reason-card span {
       display: block;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.13em;
+      letter-spacing: 0.18em;
       color: var(--accent);
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.75rem;
       font-weight: 600;
+      opacity: 0.8;
+    }
+
+    .reason-card p {
+      line-height: 1.7;
+      color: #6b5842;
     }
 
     /* Galerie */
@@ -971,93 +998,83 @@
         potentiel important : gîte, chambres d’hôtes, atelier, stockage, etc.
       </p>
 
-      <div class="two-column" style="margin-top: 1.5rem;">
-        <div>
-          <div class="pill-row">
-            <span class="pill">Cour et jardin</span>
-            <span class="pill">Vue dégagée sur la campagne</span>
-            <span class="pill">Grande grange</span>
-            <span class="pill">Dépendance avec cave & fenil</span>
-            <span class="pill">Garage</span>
-          </div>
 
-          <ul class="feature-list">
-            <li>
-              <span class="feature-bullet"></span>
-              <div>
-                <strong>Autre partie de longère :</strong> dans la partie
-                actuellement inoccupée / non rénovée, un potentiel second logement
-                comprenant environ <strong>60 m² au rez-de-chaussée</strong> et
-                <strong>60 m² à l’étage</strong>, plus une autre partie d’environ
-                <strong>20 m² sur deux niveaux</strong>. Idéal pour projet de gîte,
-                location saisonnière, extension familiale ou atelier (sous réserve
-                d’autorisations).
-              </div>
-            </li>
-            <li>
-              <span class="feature-bullet"></span>
-              <div>
-                <strong>Grande grange avec cave et fenil</strong>, parfaite pour
-                atelier, stockage, espace de bricolage, ou futur aménagement.
-              </div>
-            </li>
-            <li>
-              <span class="feature-bullet"></span>
-              <div>
-                <strong>Petit bâtiment / seconde grange</strong> actuellement
-                utilisé comme garage.
-              </div>
-            </li>
-            <li>
-              <span class="feature-bullet"></span>
-              <div>
-                <strong>Extérieurs :</strong> jardin agréable, coin terrasse,
-                cour en gravier, le tout dans un environnement très peu passant,
-                avec vues sur les champs et la campagne.
-              </div>
-            </li>
-          </ul>
+      <div class="pill-row" style="margin-top: 1.5rem;">
+        <span class="pill">Cour et jardin</span>
+        <span class="pill">Vue dégagée sur la campagne</span>
+        <span class="pill">Grande grange</span>
+        <span class="pill">Dépendance avec cave & fenil</span>
+        <span class="pill">Garage</span>
+      </div>
+
+      <ul class="feature-list" style="margin-top: 1.5rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <li>
+          <span class="feature-bullet"></span>
+          <div>
+            <strong>Autre partie de longère :</strong> dans la partie
+            actuellement inoccupée / non rénovée, un potentiel second logement
+            comprenant environ <strong>60 m² au rez-de-chaussée</strong> et
+            <strong>60 m² à l'étage</strong>, plus une autre partie d'environ
+            <strong>20 m² sur deux niveaux</strong>. Idéal pour projet de gîte,
+            location saisonnière, extension familiale ou atelier (sous réserve
+            d'autorisations).
+          </div>
+        </li>
+        <li>
+          <span class="feature-bullet"></span>
+          <div>
+            <strong>Grande grange avec cave et fenil</strong>, parfaite pour
+            atelier, stockage, espace de bricolage, ou futur aménagement.
+          </div>
+        </li>
+        <li>
+          <span class="feature-bullet"></span>
+          <div>
+            <strong>Petit bâtiment / seconde grange</strong> actuellement
+            utilisé comme garage.
+          </div>
+        </li>
+        <li>
+          <span class="feature-bullet"></span>
+          <div>
+            <strong>Extérieurs :</strong> jardin agréable, coin terrasse,
+            cour en gravier, le tout dans un environnement très peu passant,
+            avec vues sur les champs et la campagne.
+          </div>
+        </li>
+      </ul>
+
+      <div class="reason-grid" style="margin-top: 3rem;">
+        <div class="reason-card">
+          <span>01</span>
+          <h3>Intimité & calme</h3>
+          <p>
+            Située dans un petit hameau, la maison n'a pas de vis-à-vis
+            direct. On profite du silence, des vues sur les champs, et d'un
+            vrai sentiment d'espace.
+          </p>
         </div>
-
-        <div>
-          <div class="reason-grid">
-            <div class="reason-card">
-              <span>01</span>
-              <h3>Intimité & calme</h3>
-              <p>
-                Située dans un petit hameau, la maison n’a pas de vis-à-vis
-                direct. On profite du silence, des vues sur les champs, et d’un
-                vrai sentiment d’espace.
-              </p>
-            </div>
-            <div class="reason-card">
-              <span>02</span>
-              <h3>Potentiel d’extension</h3>
-              <p>
-                Grâce à la partie non rénovée de la longère (60 + 60 + 20 m²)
-                et aux granges, le bien peut évoluer selon les projets : famille
-                nombreuse, activité touristique, ateliers, stockage, etc.
-              </p>
-            </div>
-            <div class="reason-card">
-              <span>03</span>
-              <h3>Authenticité préservée</h3>
-              <p>
-                Pierre, bois, volumes et lumière : une maison de campagne qui a
-                une âme, déjà habitable et confortable, mais avec encore des
-                possibilités de personnalisation et de valorisation.
-              </p>
-            </div>
-          </div>
+        <div class="reason-card">
+          <span>02</span>
+          <h3>Potentiel d'extension</h3>
+          <p>
+            Grâce à la partie non rénovée de la longère (60 + 60 + 20 m²)
+            et aux granges, le bien peut évoluer selon les projets : famille
+            nombreuse, activité touristique, ateliers, stockage, etc.
+          </p>
+        </div>
+        <div class="reason-card">
+          <span>03</span>
+          <h3>Authenticité préservée</h3>
+          <p>
+            Pierre, bois, volumes et lumière : une maison de campagne qui a
+            une âme, déjà habitable et confortable, mais avec encore des
+            possibilités de personnalisation et de valorisation.
+          </p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- GALERIE -->
-  <section id="galerie">
-    <div class="container">
-      <h2>Galerie photos</h2>
       <p class="lead">
         Découvrez la propriété à travers cette galerie complète présentant
         la maison, les pièces de vie, les chambres, les dépendances et 
