@@ -13,26 +13,30 @@
   <meta property="og:title" content="La Trévannière – Longère de charme à la campagne" />
   <meta property="og:description" content="Longère en pierre d’environ 120 m², 3 chambres + grande pièce aménageable de 35 m², dépendances, granges et jardin, à vendre 240 000 € à Lignières-Orgères (53140). DPE estimé : D." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://chalky66.github.io/la-trevanniere" />
+  <meta property="og:url" content="https://chalky66.github.io/la-trevanniere" />
   <!-- Remplacez éventuellement par une vraie image de partage -->
-  <meta property="og:image" content="http://chalky66.github.io/la-trevanniere/images/maison-facade.jpg" />
+  <meta property="og:image" content="https://chalky66.github.io/la-trevanniere/images/maison-facade.jpg" />
+  <meta property="og:image:alt" content="Façade de la longère La Trévannière" />
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
   <style>
     :root {
-      --bg: #f5f0e8;
-      --bg-alt: #efe3d3;
-      --accent: #7b5a3a;
-      --accent-dark: #5d4027;
-      --text: #3b2a1c;
-      --muted: #8a7a6b;
-      --border: #decbb1;
+      --bg: #faf6f1;
+      --bg-alt: #f5ede2;
+      --accent: #c17a4a;
+      --accent-dark: #8b5a3c;
+      --accent-light: #d99668;
+      --text: #3d2817;
+      --muted: #7a6551;
+      --border: #e8d5c0;
       --white: #ffffff;
+      --warm-shadow: rgba(139, 90, 60, 0.08);
+      --card-shadow: rgba(139, 90, 60, 0.12);
     }
 
     * {
@@ -43,14 +47,19 @@
 
     body {
       font-family: "Lora", serif;
-      background-color: var(--bg);
+      background: linear-gradient(to bottom, #faf6f1 0%, #f5ede2 100%);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     a {
       color: var(--accent-dark);
       text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--accent);
     }
 
     img {
@@ -85,10 +94,12 @@
     h2::after {
       content: "";
       width: 70px;
-      height: 2px;
-      background-color: var(--accent);
+      height: 3px;
+      background: linear-gradient(to right, var(--accent-light), var(--accent), var(--accent-light));
       display: block;
       margin: 0.8rem auto 0;
+      border-radius: 2px;
+      box-shadow: 0 2px 4px var(--warm-shadow);
     }
 
     p.lead {
@@ -143,9 +154,10 @@
       left: 0;
       bottom: 0;
       width: 0;
-      height: 1px;
-      background-color: var(--accent);
-      transition: width 0.2s ease-out;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent-light), var(--accent));
+      transition: width 0.3s ease-out;
+      border-radius: 2px;
     }
 
     .nav a:hover::after {
@@ -167,7 +179,7 @@
       justify-content: center;
       color: var(--white);
       text-align: left;
-      background: url("images/hero-maison.jpg") center/cover no-repeat;
+      background: url("images/maisonfacade.jpg") center/cover no-repeat;
     }
 
     .hero::before {
@@ -176,8 +188,9 @@
       inset: 0;
       background: linear-gradient(
         to right,
-        rgba(37, 24, 15, 0.85),
-        rgba(37, 24, 15, 0.3)
+        rgba(61, 40, 23, 0.65),
+        rgba(61, 40, 23, 0.35),
+        rgba(139, 90, 60, 0.15)
       );
     }
 
@@ -195,24 +208,34 @@
     .hero-badge {
       display: inline-block;
       padding: 0.4rem 0.9rem;
-      background-color: rgba(245, 240, 232, 0.15);
-      border: 1px solid rgba(245, 240, 232, 0.4);
+      background: linear-gradient(135deg, rgba(193, 122, 74, 0.3), rgba(217, 150, 104, 0.25));
+      border: 1px solid rgba(255, 255, 255, 0.5);
       border-radius: 999px;
       font-size: 0.8rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 1rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
     .hero h1 {
-      font-size: clamp(2.2rem, 4vw, 3.1rem);
+      font-family: "Cormorant Garamond", "Playfair Display", serif;
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
       margin-bottom: 0.7rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.01em;
+      color: #ffffff;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.5), 0 0 30px rgba(193, 122, 74, 0.3);
     }
 
     .hero-subtitle {
-      font-size: 1.1rem;
-      color: #e8ded3;
+      font-size: 1.15rem;
+      color: #f5ebe0;
       margin-bottom: 1.5rem;
+      line-height: 1.6;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     .hero-meta {
@@ -220,15 +243,17 @@
       flex-wrap: wrap;
       gap: 0.6rem;
       font-size: 0.9rem;
-      color: #f0e5d7;
+      color: #fef8f0;
       margin-bottom: 2rem;
     }
 
     .hero-meta span {
       padding: 0.35rem 0.8rem;
-      background: rgba(245, 240, 232, 0.12);
+      background: linear-gradient(135deg, rgba(193, 122, 74, 0.25), rgba(139, 90, 60, 0.2));
       border-radius: 999px;
-      border: 1px solid rgba(245, 240, 232, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
     .hero-cta {
@@ -254,25 +279,31 @@
     }
 
     .btn-primary {
-      background-color: var(--accent);
+      background: linear-gradient(135deg, var(--accent-light), var(--accent));
       color: var(--white);
       border-color: rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(193, 122, 74, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     .btn-primary:hover {
-      background-color: var(--accent-dark);
-      transform: translateY(-1px);
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(193, 122, 74, 0.5), 0 4px 8px rgba(0, 0, 0, 0.25);
     }
 
     .btn-ghost {
-      background: transparent;
+      background: rgba(255, 255, 255, 0.1);
       color: var(--white);
-      border-color: rgba(245, 240, 232, 0.5);
+      border-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
     .btn-ghost:hover {
-      background: rgba(245, 240, 232, 0.14);
-      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-color: rgba(255, 255, 255, 0.8);
     }
 
     @media (max-width: 720px) {
@@ -299,11 +330,17 @@
     }
 
     .card {
-      background-color: var(--white);
+      background: linear-gradient(to bottom, #ffffff, #fffbf7);
       border-radius: 20px;
       border: 1px solid var(--border);
       padding: 1.8rem;
-      box-shadow: 0 10px 30px rgba(60, 40, 20, 0.08);
+      box-shadow: 0 10px 30px var(--card-shadow), 0 2px 8px var(--warm-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px var(--card-shadow), 0 4px 12px var(--warm-shadow);
     }
 
     .tag-grid {
@@ -315,10 +352,18 @@
 
     .tag {
       font-size: 0.85rem;
-      background-color: var(--bg-alt);
+      background: linear-gradient(135deg, #f5ede2, #ecdcc8);
       color: var(--accent-dark);
       padding: 0.35rem 0.7rem;
       border-radius: 999px;
+      border: 1px solid rgba(193, 122, 74, 0.15);
+      box-shadow: 0 2px 4px var(--warm-shadow);
+      transition: all 0.3s ease;
+    }
+
+    .tag:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 6px var(--warm-shadow);
     }
 
     .feature-list {
@@ -336,21 +381,23 @@
 
     .feature-bullet {
       flex-shrink: 0;
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background-color: var(--accent);
+      background: radial-gradient(circle, var(--accent-light), var(--accent));
       margin-top: 0.4rem;
+      box-shadow: 0 0 6px rgba(193, 122, 74, 0.3);
     }
 
     .highlight-box {
       margin-top: 1.4rem;
       padding: 1rem 1.1rem;
       border-radius: 14px;
-      background-color: #f9f3ea;
-      border: 1px dashed var(--border);
+      background: linear-gradient(135deg, #fff8f0, #fef3e8);
+      border: 2px dashed rgba(193, 122, 74, 0.3);
       font-size: 0.9rem;
       color: var(--muted);
+      box-shadow: 0 4px 12px var(--warm-shadow);
     }
 
     .details-grid {
@@ -382,7 +429,15 @@
       padding: 0.4rem 0.85rem;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background-color: var(--white);
+      background: linear-gradient(to bottom, #ffffff, #fffbf7);
+      box-shadow: 0 2px 6px var(--warm-shadow);
+      transition: all 0.3s ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px var(--warm-shadow);
+      border-color: var(--accent-light);
     }
 
     .reason-grid {
@@ -399,11 +454,19 @@
     }
 
     .reason-card {
-      background-color: var(--white);
+      background: linear-gradient(to bottom, #ffffff, #fffbf7);
       border-radius: 18px;
       padding: 1.4rem 1.5rem;
       border: 1px solid var(--border);
       font-size: 0.95rem;
+      box-shadow: 0 6px 20px var(--warm-shadow);
+      transition: all 0.3s ease;
+    }
+
+    .reason-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px var(--card-shadow);
+      border-color: var(--accent-light);
     }
 
     .reason-card h3 {
@@ -416,8 +479,9 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.13em;
-      color: var(--muted);
+      color: var(--accent);
       margin-bottom: 0.3rem;
+      font-weight: 600;
     }
 
     /* Galerie */
@@ -442,8 +506,16 @@
     .gallery-item {
       border-radius: 16px;
       overflow: hidden;
-      border: 1px solid var(--border);
-      background-color: #e4d6c5;
+      border: 2px solid var(--border);
+      background: linear-gradient(135deg, #e8d5c0, #d9c4ad);
+      box-shadow: 0 4px 12px var(--warm-shadow);
+      transition: all 0.4s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px var(--card-shadow);
+      border-color: var(--accent-light);
     }
 
     .gallery-item img {
@@ -454,7 +526,7 @@
     }
 
     .gallery-item:hover img {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
 
     /* Situation */
@@ -488,9 +560,17 @@
 
     .badge {
       border-radius: 999px;
-      background-color: var(--bg-alt);
+      background: linear-gradient(135deg, #f5ede2, #ecdcc8);
       padding: 0.3rem 0.7rem;
       color: var(--accent-dark);
+      border: 1px solid rgba(193, 122, 74, 0.2);
+      box-shadow: 0 2px 6px var(--warm-shadow);
+      transition: all 0.3s ease;
+    }
+
+    .badge:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px var(--warm-shadow);
     }
 
     /* Infos pratiques & contact */
@@ -507,10 +587,11 @@
     }
 
     .price-box {
-      background-color: var(--white);
+      background: linear-gradient(to bottom right, #ffffff, #fffbf7, #fff8f0);
       border-radius: 20px;
-      border: 1px solid var(--border);
+      border: 2px solid var(--accent-light);
       padding: 1.7rem;
+      box-shadow: 0 8px 24px var(--card-shadow), 0 0 0 1px rgba(193, 122, 74, 0.1) inset;
     }
 
     .price-label {
@@ -523,8 +604,10 @@
 
     .price-value {
       font-family: "Playfair Display", serif;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       margin-bottom: 0.7rem;
+      color: var(--accent);
+      font-weight: 600;
     }
 
     .price-note {
@@ -549,11 +632,13 @@
       width: 100%;
       padding: 0.65rem 0.8rem;
       border-radius: 10px;
-      border: 1px solid var(--border);
-      background-color: #fdf9f4;
+      border: 2px solid var(--border);
+      background: linear-gradient(to bottom, #fffcf9, #fdf9f4);
       font-family: inherit;
       font-size: 0.95rem;
       color: inherit;
+      box-shadow: 0 2px 6px var(--warm-shadow) inset;
+      transition: all 0.3s ease;
     }
 
     textarea {
@@ -565,17 +650,147 @@
     textarea:focus {
       outline: none;
       border-color: var(--accent);
-      background-color: #fffaf3;
+      background: #ffffff;
+      box-shadow: 0 2px 6px var(--warm-shadow) inset, 0 0 0 3px rgba(193, 122, 74, 0.15);
     }
 
     footer {
       padding: 1.8rem 0 2.3rem;
-      border-top: 1px solid var(--border);
+      border-top: 2px solid var(--accent-light);
       text-align: center;
       font-size: 0.85rem;
       color: var(--muted);
-      background-color: #f2e9dd;
+      background: linear-gradient(to bottom, #f5ede2, #ecdcc8);
       margin-top: 3rem;
+      box-shadow: 0 -4px 12px var(--warm-shadow);
+    }
+
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      z-index: 10000;
+      background: rgba(193, 122, 74, 0.8);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .lightbox-close:hover {
+      background: rgba(193, 122, 74, 1);
+      transform: rotate(90deg);
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      background: rgba(193, 122, 74, 0.8);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      user-select: none;
+    }
+
+    .lightbox-nav:hover {
+      background: rgba(193, 122, 74, 1);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .lightbox-prev {
+      left: 30px;
+    }
+
+    .lightbox-next {
+      right: 30px;
+    }
+
+    .lightbox-counter {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 16px;
+      background: rgba(193, 122, 74, 0.8);
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .lightbox-nav {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+      }
+
+      .lightbox-prev {
+        left: 15px;
+      }
+
+      .lightbox-next {
+        right: 15px;
+      }
+
+      .lightbox-close {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 35px;
+      }
     }
   </style>
 </head>
@@ -727,8 +942,9 @@
       <div>
         <div class="card">
           <img
-            src="images/interieur-salon.jpg"
+            src="images/salon-feu.jpg"
             alt="Salon chaleureux avec vue sur le jardin"
+            loading="lazy"
           />
           <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.7rem;">
             Pièce de vie lumineuse (salon & salle à manger), ouvrant sur le
@@ -837,29 +1053,70 @@
     <div class="container">
       <h2>Galerie photos</h2>
       <p class="lead">
-        Aperçu de la maison, des pièces de vie, des chambres et des dépendances.
-        Un album photo plus complet et/ou une vidéo de présentation peuvent être
-        envoyés sur demande.
+        Découvrez la propriété à travers cette galerie complète présentant
+        la maison, les pièces de vie, les chambres, les dépendances et 
+        l'environnement campagnard de La Trévannière.
       </p>
 
       <div class="gallery-grid">
+        <!-- External photos first -->
         <div class="gallery-item">
-          <img src="images/maison-facade.jpg" alt="Façade de la longère La Trévannière" />
+          <img src="images/maisonfacade.jpg" alt="Façade de la longère La Trévannière" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="images/cour.jpg" alt="Cour et entrée de la maison" />
+          <img src="images/photo-4.jpg" alt="Vue extérieure" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="images/jardin.jpg" alt="Jardin avec vue sur la campagne" />
+          <img src="images/photo-5.jpg" alt="Détail de la propriété" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="images/salon.jpg" alt="Salon et salle à manger" />
+          <img src="images/photo-6.jpg" alt="Vue du terrain" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="images/chambre-principale.jpg" alt="Chambre principale cosy avec vue jardin" />
+          <img src="images/photo-8.jpg" alt="Environnement campagne" loading="lazy" />
         </div>
         <div class="gallery-item">
-          <img src="images/grange.jpg" alt="Grande grange en pierre" />
+          <img src="images/photo-9.jpg" alt="Architecture de la longère" loading="lazy" />
+        </div>
+        <!-- Interior photos -->
+        <div class="gallery-item">
+          <img src="images/entreesousesalier.jpg" alt="Entrée sous escalier" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/escalier.jpg" alt="Escalier intérieur" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/jardinetveranda.jpg" alt="Salon - vue jardin" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/veranda.jpg" alt="Salon - vue véranda" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/salon-feu.jpg" alt="Salon avec cheminée" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/cuisinefour.jpg" alt="Cuisine avec four" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/cuisinefrigo.jpg" alt="Cuisine équipée" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/chambre-principale.jpg" alt="Chambre principale cosy" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/chambre-principale-2.jpg" alt="Autre vue de la chambre" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/mezzanine.jpg" alt="Mezzanine aménageable" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/salledebain.jpg" alt="Salle de bain" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/salledebain2.jpg" alt="Salle de bain - autre vue" loading="lazy" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/sallededouche.jpg" alt="Salle de douche" loading="lazy" />
         </div>
       </div>
     </div>
@@ -903,6 +1160,8 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            title="Carte de localisation de La Trévannière à Lignières-Orgères"
+            lang="fr"
           ></iframe>
         </div>
         <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem;">
@@ -955,7 +1214,7 @@
 
           <div class="highlight-box" style="margin-top: 1.4rem;">
             Vous pouvez mentionner ce site dans votre message Leboncoin :<br />
-            <strong>http://chalky66.github.io/la-trevanniere</strong><br />
+            <strong>https://chalky66.github.io/la-trevanniere</strong><br />
             pour accéder à la galerie, aux informations détaillées et, si besoin,
             à une visite vidéo ou un dossier complet (plans, surfaces, etc.).
           </div>
@@ -974,7 +1233,7 @@
         <form>
           <div>
             <label for="name">Nom</label>
-            <input type="text" id="name" name="name" placeholder="Votre nom" />
+            <input type="text" id="name" name="name" placeholder="Votre nom" required />
           </div>
           <div>
             <label for="email">E-mail</label>
@@ -983,6 +1242,7 @@
               id="email"
               name="email"
               placeholder="votre.adresse@email.com"
+              required
             />
           </div>
           <div>
@@ -991,6 +1251,7 @@
               id="message"
               name="message"
               placeholder="Parlez-nous un peu de votre projet, de votre financement et de vos disponibilités pour une visite."
+              required
             ></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
@@ -1009,8 +1270,100 @@
 
   <footer>
     La Trévannière – Site de présentation privée du bien à Lignières-Orgères (53140).<br />
-    URL : <a href="http://chalky66.github.io/la-trevanniere">chalky66.github.io/la-trevanniere</a><br />
+    URL : <a href="https://chalky66.github.io/la-trevanniere">chalky66.github.io/la-trevanniere</a><br />
     Photos et informations non contractuelles, fournies à titre indicatif.
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</div>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Image en plein écran">
+    </div>
+    <div class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</div>
+    <div class="lightbox-counter" id="lightbox-counter"></div>
+  </div>
+
+  <script>
+    let currentImageIndex = 0;
+    const galleryImages = [];
+
+    // Collect all gallery images on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const galleryItems = document.querySelectorAll('.gallery-item img');
+      galleryItems.forEach((img, index) => {
+        galleryImages.push({
+          src: img.src,
+          alt: img.alt
+        });
+        
+        // Add click event to each gallery image
+        img.parentElement.style.cursor = 'pointer';
+        img.parentElement.addEventListener('click', function() {
+          openLightbox(index);
+        });
+      });
+    });
+
+    function openLightbox(index) {
+      currentImageIndex = index;
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      lightboxImg.src = galleryImages[currentImageIndex].src;
+      lightboxImg.alt = galleryImages[currentImageIndex].alt;
+      
+      updateCounter();
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function changeImage(direction) {
+      currentImageIndex += direction;
+      
+      // Loop around if at the end or beginning
+      if (currentImageIndex >= galleryImages.length) {
+        currentImageIndex = 0;
+      } else if (currentImageIndex < 0) {
+        currentImageIndex = galleryImages.length - 1;
+      }
+      
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = galleryImages[currentImageIndex].src;
+      lightboxImg.alt = galleryImages[currentImageIndex].alt;
+      
+      updateCounter();
+    }
+
+    function updateCounter() {
+      const counter = document.getElementById('lightbox-counter');
+      counter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+    }
+
+    // Close lightbox on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        changeImage(-1);
+      } else if (e.key === 'ArrowRight') {
+        changeImage(1);
+      }
+    });
+
+    // Close lightbox when clicking outside the image
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLightbox();
+      }
+    });
+  </script>
 </body>
 </html>
