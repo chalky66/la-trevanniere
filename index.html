@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>La Trévannière – Longère de charme à la campagne – Lignières-Orgères</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="La Trévannière – Longère de charme en pierre d’environ 120 m² habitables, avec dépendances, potentiel gîte et jardin, à vendre 240 000 € près de Lignières-Orgères (53140), aux portes de l’Orne et d’Alençon. DPE estimé : classe D."
+  />
+
+  <!-- Open Graph / partage réseaux -->
+  <meta property="og:title" content="La Trévannière – Longère de charme à la campagne" />
+  <meta property="og:description" content="Longère en pierre d’environ 120 m², 3 chambres + grande pièce aménageable de 35 m², dépendances, granges et jardin, à vendre 240 000 € à Lignières-Orgères (53140). DPE estimé : D." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://chalky66.github.io/la-trevanniere" />
+  <!-- Remplacez éventuellement par une vraie image de partage -->
+  <meta property="og:image" content="http://chalky66.github.io/la-trevanniere/images/maison-facade.jpg" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-alt: #efe3d3;
+      --accent: #7b5a3a;
+      --accent-dark: #5d4027;
+      --text: #3b2a1c;
+      --muted: #8a7a6b;
+      --border: #decbb1;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Lora", serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    h1, h2, h3 {
+      font-family: "Playfair Display", serif;
+      letter-spacing: 0.03em;
+      color: var(--accent-dark);
+    }
+
+    h2 {
+      font-size: 2.1rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 70px;
+      height: 2px;
+      background-color: var(--accent);
+      display: block;
+      margin: 0.8rem auto 0;
+    }
+
+    p.lead {
+      max-width: 750px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* Header / Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(245, 240, 232, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .nav a {
+      position: relative;
+      padding-bottom: 0.2rem;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--accent);
+      transition: width 0.2s ease-out;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    @media (max-width: 720px) {
+      .nav ul {
+        display: none;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      text-align: left;
+      background: url("images/hero-maison.jpg") center/cover no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(37, 24, 15, 0.85),
+        rgba(37, 24, 15, 0.3)
+      );
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero-content {
+      max-width: 550px;
+      padding: 3rem 0;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.4rem 0.9rem;
+      background-color: rgba(245, 240, 232, 0.15);
+      border: 1px solid rgba(245, 240, 232, 0.4);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3.1rem);
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #e8ded3;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: #f0e5d7;
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta span {
+      padding: 0.35rem 0.8rem;
+      background: rgba(245, 240, 232, 0.12);
+      border-radius: 999px;
+      border: 1px solid rgba(245, 240, 232, 0.2);
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s ease-out, color 0.2s ease-out,
+        border-color 0.2s ease-out, transform 0.1s ease-out;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: var(--white);
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(245, 240, 232, 0.5);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(245, 240, 232, 0.14);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        text-align: left;
+      }
+      .hero-content {
+        padding: 2.5rem 0;
+      }
+    }
+
+    /* Two-column layout */
+    .two-column {
+      display: grid;
+      grid-template-columns: 1.15fr 0.95fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 1.8rem;
+      box-shadow: 0 10px 30px rgba(60, 40, 20, 0.08);
+    }
+
+    .tag-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1.2rem 0 1.7rem;
+    }
+
+    .tag {
+      font-size: 0.85rem;
+      background-color: var(--bg-alt);
+      color: var(--accent-dark);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .feature-list li {
+      display: flex;
+      gap: 0.6rem;
+      margin-bottom: 0.7rem;
+      font-size: 0.95rem;
+    }
+
+    .feature-bullet {
+      flex-shrink: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      margin-top: 0.4rem;
+    }
+
+    .highlight-box {
+      margin-top: 1.4rem;
+      padding: 1rem 1.1rem;
+      border-radius: 14px;
+      background-color: #f9f3ea;
+      border: 1px dashed var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .details-label {
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 0.1rem;
+    }
+
+    /* Extérieurs & raisons */
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .pill {
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background-color: var(--white);
+    }
+
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .reason-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .reason-card {
+      background-color: var(--white);
+      border-radius: 18px;
+      padding: 1.4rem 1.5rem;
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .reason-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .reason-card span {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Galerie */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background-color: #e4d6c5;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease-out;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Situation */
+    .map-wrapper {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background-color: #ddd;
+      min-height: 260px;
+    }
+
+    .situation-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .situation-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .badge {
+      border-radius: 999px;
+      background-color: var(--bg-alt);
+      padding: 0.3rem 0.7rem;
+      color: var(--accent-dark);
+    }
+
+    /* Infos pratiques & contact */
+    .info-contact {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 2.3rem;
+    }
+
+    @media (max-width: 900px) {
+      .info-contact {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .price-box {
+      background-color: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 1.7rem;
+    }
+
+    .price-label {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.13em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .price-value {
+      font-family: "Playfair Display", serif;
+      font-size: 1.6rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .price-note {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    form {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.65rem 0.8rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background-color: #fdf9f4;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: inherit;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background-color: #fffaf3;
+    }
+
+    footer {
+      padding: 1.8rem 0 2.3rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background-color: #f2e9dd;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="logo">La Trévannière</div>
+      <nav>
+        <ul>
+          <li><a href="#maison">La maison</a></li>
+          <li><a href="#exterieurs">Extérieurs</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#situation">Situation</a></li>
+          <li><a href="#infos">Infos & contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">En vente – Pays de la Loire</div>
+        <h1>Longère de charme au calme, sans vis-à-vis</h1>
+        <p class="hero-subtitle">
+          La Trévannière – Une longère en pierre chaleureuse, entourée de verdure,
+          dans un petit hameau paisible à proximité de Lignières-Orgères (53140),
+          aux portes de l’Orne et d’Alençon.
+        </p>
+        <div class="hero-meta">
+          <span>Env. 120 m² habitables</span>
+          <span>3 chambres + pièce aménageable (35 m²)</span>
+          <span>Partie de longère à rénover : 60 + 60 + 20 m²</span>
+          <span>Granges, cave, garage</span>
+          <span>Prix : 240 000 €</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#galerie" class="btn btn-primary">Voir les photos</a>
+          <a href="#infos" class="btn btn-ghost">Demander des infos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA MAISON -->
+  <section id="maison">
+    <div class="container two-column">
+      <div>
+        <h2>La maison</h2>
+        <p class="lead">
+          Une longère en pierre rénovée avec soin, offrant environ
+          <strong>120 m² habitables</strong>, alliant confort moderne et charme
+          authentique : double vitrage, isolation des combles, nouvelle chaudière
+          gaz à condensation et VMC, tout en préservant poutres, volumes et une
+          atmosphère chaleureuse. La maison est située dans un
+          <strong>petit hameau sans vis-à-vis direct</strong>, avec vues dégagées
+          sur la campagne environnante.
+        </p>
+
+        <div class="card">
+          <div class="tag-grid">
+            <span class="tag">Environ 120 m² habitables</span>
+            <span class="tag">3 chambres</span>
+            <span class="tag">Pièce aménageable 35 m²</span>
+            <span class="tag">Partie de longère à rénover</span>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Rez-de-chaussée :</strong> entrée, grande pièce de vie
+                avec salon et salle à manger, lumière traversante et vue sur le
+                jardin, cuisine, salle d’eau, WC.
+              </div>
+            </li>
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Chambre principale cosy</strong> d’environ
+                <strong>12 m²</strong> avec vue sur le jardin et la campagne
+                environnante.
+              </div>
+            </li>
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Deux autres chambres / pièces</strong> d’environ
+                <strong>13 m²</strong> chacune, lumineuses, pouvant servir de
+                chambre, bureau, atelier ou espace invités.
+              </div>
+            </li>
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                À l’étage, <strong>une grande pièce déjà plâtrée et peinte</strong>
+                d’environ <strong>35 m²</strong>, offrant la possibilité de créer
+                une très grande chambre supplémentaire, une suite parentale avec
+                salle d’eau et/ou dressing, ou deux chambres distinctes.
+              </div>
+            </li>
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Confort :</strong> double vitrage, isolation des combles,
+                <strong>nouvelle chaudière gaz à condensation</strong> et VMC,
+                pour une gestion efficace du chauffage et de l’humidité.
+              </div>
+            </li>
+          </ul>
+
+          <div class="highlight-box">
+            La maison se situe dans un petit hameau, <strong>sans vis-à-vis
+            direct</strong>, ce qui garantit calme et intimité, tout en restant
+            à une distance raisonnable des commerces et services.
+          </div>
+
+          <div class="details-grid">
+            <div>
+              <div class="details-label">Surface habitable</div>
+              <div>Environ 120 m²</div>
+            </div>
+            <div>
+              <div class="details-label">Pièce aménageable</div>
+              <div>≈ 35 m² à l’étage</div>
+            </div>
+            <div>
+              <div class="details-label">Chambres</div>
+              <div>3 actuelles (+ potentiel 4e / suite)</div>
+            </div>
+            <div>
+              <div class="details-label">Chauffage</div>
+              <div>Chaudière gaz à condensation + VMC</div>
+            </div>
+            <div>
+              <div class="details-label">DPE estimé</div>
+              <div>Classe D (estimation)</div>
+            </div>
+            <div>
+              <div class="details-label">Prix demandé</div>
+              <div>240 000 €</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <img
+            src="images/interieur-salon.jpg"
+            alt="Salon chaleureux avec vue sur le jardin"
+          />
+          <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.7rem;">
+            Pièce de vie lumineuse (salon & salle à manger), ouvrant sur le
+            jardin et la cour.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTERIEURS & DEPENDANCES -->
+  <section id="exterieurs" style="background-color: var(--bg-alt);">
+    <div class="container">
+      <h2>Extérieurs & dépendances</h2>
+      <p class="lead">
+        En prolongement de la longère principale, une seconde partie non occupée
+        et non rénovée ainsi que plusieurs granges et dépendances offrent un
+        potentiel important : gîte, chambres d’hôtes, atelier, stockage, etc.
+      </p>
+
+      <div class="two-column" style="margin-top: 1.5rem;">
+        <div>
+          <div class="pill-row">
+            <span class="pill">Cour et jardin</span>
+            <span class="pill">Vue dégagée sur la campagne</span>
+            <span class="pill">Grande grange</span>
+            <span class="pill">Dépendance avec cave & fenil</span>
+            <span class="pill">Garage</span>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Autre partie de longère :</strong> dans la partie
+                actuellement inoccupée / non rénovée, un potentiel second logement
+                comprenant environ <strong>60 m² au rez-de-chaussée</strong> et
+                <strong>60 m² à l’étage</strong>, plus une autre partie d’environ
+                <strong>20 m² sur deux niveaux</strong>. Idéal pour projet de gîte,
+                location saisonnière, extension familiale ou atelier (sous réserve
+                d’autorisations).
+              </div>
+            </li>
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Grande grange avec cave et fenil</strong>, parfaite pour
+                atelier, stockage, espace de bricolage, ou futur aménagement.
+              </div>
+            </li>
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Petit bâtiment / seconde grange</strong> actuellement
+                utilisé comme garage.
+              </div>
+            </li>
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Extérieurs :</strong> jardin agréable, coin terrasse,
+                cour en gravier, le tout dans un environnement très peu passant,
+                avec vues sur les champs et la campagne.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="reason-grid">
+            <div class="reason-card">
+              <span>01</span>
+              <h3>Intimité & calme</h3>
+              <p>
+                Située dans un petit hameau, la maison n’a pas de vis-à-vis
+                direct. On profite du silence, des vues sur les champs, et d’un
+                vrai sentiment d’espace.
+              </p>
+            </div>
+            <div class="reason-card">
+              <span>02</span>
+              <h3>Potentiel d’extension</h3>
+              <p>
+                Grâce à la partie non rénovée de la longère (60 + 60 + 20 m²)
+                et aux granges, le bien peut évoluer selon les projets : famille
+                nombreuse, activité touristique, ateliers, stockage, etc.
+              </p>
+            </div>
+            <div class="reason-card">
+              <span>03</span>
+              <h3>Authenticité préservée</h3>
+              <p>
+                Pierre, bois, volumes et lumière : une maison de campagne qui a
+                une âme, déjà habitable et confortable, mais avec encore des
+                possibilités de personnalisation et de valorisation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie">
+    <div class="container">
+      <h2>Galerie photos</h2>
+      <p class="lead">
+        Aperçu de la maison, des pièces de vie, des chambres et des dépendances.
+        Un album photo plus complet et/ou une vidéo de présentation peuvent être
+        envoyés sur demande.
+      </p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="images/maison-facade.jpg" alt="Façade de la longère La Trévannière" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/cour.jpg" alt="Cour et entrée de la maison" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/jardin.jpg" alt="Jardin avec vue sur la campagne" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/salon.jpg" alt="Salon et salle à manger" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/chambre-principale.jpg" alt="Chambre principale cosy avec vue jardin" />
+        </div>
+        <div class="gallery-item">
+          <img src="images/grange.jpg" alt="Grande grange en pierre" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SITUATION -->
+  <section id="situation" style="background-color: var(--bg-alt);">
+    <div class="container situation-grid">
+      <div>
+        <h2>Situation & environnement</h2>
+        <p class="lead">
+          La Trévannière se trouve à Lignières-Orgères (53140), au nord de la
+          Mayenne, proche de la frontière avec l’Orne, dans un secteur vallonné,
+          vert et préservé.
+        </p>
+
+        <p>
+          Le bien est situé dans un <strong>petit hameau</strong>, à quelques
+          minutes du bourg et des premiers commerces. Les villes de référence
+          (Alençon, Mayenne, Bagnoles-de-l’Orne, etc.) sont accessibles en
+          voiture pour les courses, services et loisirs. Le secteur conviendra
+          particulièrement aux personnes recherchant le <strong>calme, la
+          nature et l’espace</strong>.
+        </p>
+
+        <div class="badge-row">
+          <span class="badge">Lignières-Orgères – 53140</span>
+          <span class="badge">Pays de la Loire</span>
+          <span class="badge">Proche Parc Normandie-Maine</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="map-wrapper">
+          <!-- Remplacez l'iframe ci-dessous par votre propre lien Google Maps -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2684.885!2d-0.0!3d48.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDAwJzAwLjAiTiAwwrAwMCcwMC4wIkU!5e0!3m2!1sfr!2sfr!4v0000000000000"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem;">
+          Localisation indicative – le positionnement précis sera communiqué après premier contact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFOS & CONTACT -->
+  <section id="infos">
+    <div class="container info-contact">
+      <div>
+        <h2>Infos pratiques</h2>
+        <div class="price-box">
+          <div class="price-label">Prix demandé</div>
+          <div class="price-value">240 000 €</div>
+          <p class="price-note">
+            Prix indicatif pour l’ensemble : maison principale, partie de longère
+            à rénover (60 + 60 + 20 m²) et dépendances (granges, cave, garage).
+            <br/>
+            <strong>DPE estimé : classe D</strong> sur la base des caractéristiques
+            actuelles (double vitrage, isolation des combles, chaudière gaz à
+            condensation, VMC).
+          </p>
+
+          <ul class="feature-list" style="margin-top: 1.2rem;">
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Type de bien :</strong> longère en pierre avec dépendances et potentiel de second logement.
+              </div>
+            </li>
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Localisation :</strong> Lignières-Orgères (53140), petit hameau
+                sans vis-à-vis direct, environnement campagne.
+              </div>
+            </li>
+            <li>
+              <span class="feature-bullet"></span>
+              <div>
+                <strong>Usage idéal :</strong> résidence principale, maison de
+                campagne, projet de gîte / chambres d’hôtes ou activité
+                complémentaire (sous réserve d’autorisations).
+              </div>
+            </li>
+          </ul>
+
+          <div class="highlight-box" style="margin-top: 1.4rem;">
+            Vous pouvez mentionner ce site dans votre message Leboncoin :<br />
+            <strong>http://chalky66.github.io/la-trevanniere</strong><br />
+            pour accéder à la galerie, aux informations détaillées et, si besoin,
+            à une visite vidéo ou un dossier complet (plans, surfaces, etc.).
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Contact</h2>
+        <p class="lead" style="margin-bottom: 1.2rem;">
+          Intéressé(e) par La Trévannière ? Laissez un message avec vos coordonnées
+          et vos disponibilités. Une réponse vous sera apportée rapidement.
+        </p>
+
+        <!-- Version simple : à connecter à votre adresse e-mail ou utiliser la messagerie Leboncoin -->
+        <!-- Exemple : action="mailto:votre.adresse@email.com" method="post" enctype="text/plain" -->
+        <form>
+          <div>
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" />
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="votre.adresse@email.com"
+            />
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Parlez-nous un peu de votre projet, de votre financement et de vos disponibilités pour une visite."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
+            Envoyer
+          </button>
+          <p style="font-size: 0.75rem; color: var(--muted); margin-top: 0.6rem;">
+            Vous pouvez également nous écrire via la messagerie Leboncoin
+            en indiquant le nom du bien <strong>“La Trévannière”</strong> et
+            en mentionnant que vous avez consulté le site :
+            <strong>chalky66.github.io/la-trevanniere</strong>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    La Trévannière – Site de présentation privée du bien à Lignières-Orgères (53140).<br />
+    URL : <a href="http://chalky66.github.io/la-trevanniere">chalky66.github.io/la-trevanniere</a><br />
+    Photos et informations non contractuelles, fournies à titre indicatif.
+  </footer>
+</body>
+</html>
