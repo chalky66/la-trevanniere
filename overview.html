@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>La Trevanniere - Aperçu imprimable</title>
+  <style>
+    @media print {
+      body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 20mm;
+        font-family: Arial, sans-serif;
+        background: #fff;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .qr {
+        margin: 30px 0;
+      }
+      h1 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+      .instruction {
+        font-size: 1.2em;
+        margin-bottom: 2em;
+      }
+    }
+    body {
+      background: #f9f9f9;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 40px;
+      text-align: center;
+    }
+    .qr {
+      margin: 30px 0;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .instruction {
+      color: #34495e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>La Trevanniere</h1>
+    <div class="instruction">
+      Scannez ce code pour voir le site web<br>
+      <small>(https://chalky66.github.io/la-trevanniere/)</small>
+    </div>
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://chalky66.github.io/la-trevanniere/" alt="QR Code vers le site web" />
+    </div>
+    <div class="overview">
+      <h2>Aperçu</h2>
+      <p>Bienvenue à La Trevanniere. Ce document est conçu pour être imprimé au format A4 et vous permet d'accéder rapidement au site web en scannant le code QR ci-dessus.</p>
+      <ul style="text-align:left; display:inline-block; margin: 0 auto;">
+        <li>Adresse : [à compléter]</li>
+        <li>Contact : [à compléter]</li>
+        <li>Points clés : [à compléter]</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
