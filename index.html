@@ -25,26 +25,59 @@
   />
 
   <style>
+                .mobile-nav ul {
+                  background: #fff8f0;
+                  border-radius: 16px;
+                  box-shadow: 0 2px 12px var(--warm-shadow);
+                  padding: 2rem 1.5rem;
+                  margin: 2rem auto 0 auto;
+                  max-width: 90vw;
+                }
+                .mobile-nav li {
+                  width: 100%;
+                }
+                .mobile-nav a {
+                  color: var(--accent-dark) !important;
+                  background: #fff8f0 !important;
+                  font-size: 1.3rem;
+                  font-weight: 700;
+                  border-radius: 8px;
+                  padding: 1rem 0;
+                  margin: 0.5rem 0;
+                  display: block;
+                  text-align: center;
+                  box-shadow: 0 1px 4px var(--warm-shadow);
+                }
+                .mobile-nav a:hover {
+                  background: var(--accent-light) !important;
+                  color: #fff !important;
+                }
         /* --- Navigation Responsive Fixes --- */
         .desktop-nav {
           display: block;
         }
         .hamburger {
-          display: none !important;
+          display: none;
         }
         .mobile-nav {
           display: none;
-          position: absolute;
-          top: 100%;
+          position: fixed;
+          top: 0;
           left: 0;
-          width: 100%;
-          background: rgba(245, 240, 232, 0.98);
+          width: 100vw;
+          height: 100vh;
+          background: rgba(245, 240, 232, 0.85);
           box-shadow: 0 4px 16px var(--warm-shadow);
-          z-index: 30;
-          transition: max-height 0.3s ease;
+          z-index: 9999;
+          transition: opacity 0.3s ease;
+          padding-top: 80px;
+          overflow-y: auto;
         }
         .mobile-nav.open {
-          display: block;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
         }
         .mobile-nav ul {
           list-style: none;
@@ -98,7 +131,7 @@
             display: none;
           }
           .hamburger {
-            display: inline-flex !important;
+            display: inline-flex;
           }
           .mobile-nav {
             display: none;
@@ -196,7 +229,7 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 100;
       background: rgba(245, 240, 232, 0.96);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border);
@@ -928,7 +961,15 @@
       </button>
     </div>
     <nav class="mobile-nav" id="mobileNav">
-
+      <ul>
+        <li><a href="#maison" onclick="closeMobileMenu()">La maison</a></li>
+        <li><a href="#exterieurs" onclick="closeMobileMenu()">Extérieurs</a></li>
+        <li><a href="#galerie" onclick="closeMobileMenu()">Galerie</a></li>
+        <li><a href="#situation" onclick="closeMobileMenu()">Situation</a></li>
+        <li><a href="#infos" onclick="closeMobileMenu()">Infos & contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
@@ -1489,6 +1530,19 @@
         closeLightbox();
       }
     });
+  </script>
+  <!-- Hamburger menu JS -->
+  <script>
+    function toggleMobileMenu() {
+      var nav = document.getElementById('mobileNav');
+      nav.classList.toggle('open');
+      document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+    }
+    function closeMobileMenu() {
+      var nav = document.getElementById('mobileNav');
+      nav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
   </script>
 </body>
 </html>
